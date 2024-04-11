@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E99C10FB2BC7066600EC3BFA /* BrowserEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C10FA2BC7066600EC3BFA /* BrowserEntry.swift */; };
+		E99C10FD2BC70CCE00EC3BFA /* BrowserDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C10FC2BC70CCE00EC3BFA /* BrowserDetector.swift */; };
 		E9AD66B82BC45EE2004C6B4C /* BrowserPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD66B72BC45EE2004C6B4C /* BrowserPickerApp.swift */; };
 		E9AD66BA2BC45EE2004C6B4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD66B92BC45EE2004C6B4C /* ContentView.swift */; };
 		E9AD66BC2BC45EE3004C6B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AD66BB2BC45EE3004C6B4C /* Assets.xcassets */; };
 		E9AD66BF2BC45EE3004C6B4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AD66BE2BC45EE3004C6B4C /* Preview Assets.xcassets */; };
+		E9AD66C82BC460B8004C6B4C /* BrowserAvailability in Frameworks */ = {isa = PBXBuildFile; productRef = E9AD66C72BC460B8004C6B4C /* BrowserAvailability */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E99C10FA2BC7066600EC3BFA /* BrowserEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserEntry.swift; sourceTree = "<group>"; };
+		E99C10FC2BC70CCE00EC3BFA /* BrowserDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserDetector.swift; sourceTree = "<group>"; };
+		E99C11022BC743CC00EC3BFA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E9AD66B42BC45EE2004C6B4C /* BrowserPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowserPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AD66B72BC45EE2004C6B4C /* BrowserPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserPickerApp.swift; sourceTree = "<group>"; };
 		E9AD66B92BC45EE2004C6B4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AD66C82BC460B8004C6B4C /* BrowserAvailability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +43,7 @@
 		E9AD66AB2BC45EE2004C6B4C = {
 			isa = PBXGroup;
 			children = (
+				E99C11022BC743CC00EC3BFA /* README.md */,
 				E9AD66B62BC45EE2004C6B4C /* BrowserPicker */,
 				E9AD66B52BC45EE2004C6B4C /* Products */,
 			);
@@ -57,6 +65,8 @@
 				E9AD66BB2BC45EE3004C6B4C /* Assets.xcassets */,
 				E9AD66C02BC45EE3004C6B4C /* BrowserPicker.entitlements */,
 				E9AD66BD2BC45EE3004C6B4C /* Preview Content */,
+				E99C10FA2BC7066600EC3BFA /* BrowserEntry.swift */,
+				E99C10FC2BC70CCE00EC3BFA /* BrowserDetector.swift */,
 			);
 			path = BrowserPicker;
 			sourceTree = "<group>";
@@ -85,6 +95,9 @@
 			dependencies = (
 			);
 			name = BrowserPicker;
+			packageProductDependencies = (
+				E9AD66C72BC460B8004C6B4C /* BrowserAvailability */,
+			);
 			productName = BrowserPicker;
 			productReference = E9AD66B42BC45EE2004C6B4C /* BrowserPicker.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +126,9 @@
 				Base,
 			);
 			mainGroup = E9AD66AB2BC45EE2004C6B4C;
+			packageReferences = (
+				E9AD66C62BC460B8004C6B4C /* XCRemoteSwiftPackageReference "BrowserAvailability" */,
+			);
 			productRefGroup = E9AD66B52BC45EE2004C6B4C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99C10FB2BC7066600EC3BFA /* BrowserEntry.swift in Sources */,
 				E9AD66BA2BC45EE2004C6B4C /* ContentView.swift in Sources */,
+				E99C10FD2BC70CCE00EC3BFA /* BrowserDetector.swift in Sources */,
 				E9AD66B82BC45EE2004C6B4C /* BrowserPickerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9AD66C62BC460B8004C6B4C /* XCRemoteSwiftPackageReference "BrowserAvailability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timtwotoes/BrowserAvailability";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9AD66C72BC460B8004C6B4C /* BrowserAvailability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9AD66C62BC460B8004C6B4C /* XCRemoteSwiftPackageReference "BrowserAvailability" */;
+			productName = BrowserAvailability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9AD66AC2BC45EE2004C6B4C /* Project object */;
 }

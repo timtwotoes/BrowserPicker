@@ -1,0 +1,15 @@
+{
+  "originHash" : "3b524a759839cd4c4642f748fb8064d8aa16ee4bc0d203584dc8c4580ed449f3",
+  "pins" : [
+    {
+      "identity" : "browseravailability",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/timtwotoes/BrowserAvailability",
+      "state" : {
+        "revision" : "c31576dfc29bd2d327df0332e46c22d54499fe3b",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}

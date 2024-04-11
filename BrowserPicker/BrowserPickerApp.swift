@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct BrowserPickerApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+        Window("Browser Picker", id: "main") {
+            ContentView().fixedSize(horizontal: false, vertical: true)
+        }.windowResizability(.contentSize)
     }
 }
