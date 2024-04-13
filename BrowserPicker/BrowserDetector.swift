@@ -22,5 +22,11 @@ class BrowserDetector: ObservableObject {
         selectedBrowser = availableBrowsers.first!.url
     }
     
-    
+    func isDefaultBrowser(entry: BrowserEntry) -> Bool {
+        if let firstBrowser = availableBrowsers.first {
+            return firstBrowser.url == entry.url
+        }
+        
+        return false
+    }
 }

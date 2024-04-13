@@ -10,7 +10,11 @@ struct ContentView: View {
             HStack {
                 Picker("Browser", selection: $browserDetector.selectedBrowser) {
                     ForEach(browserDetector.availableBrowsers) { entry in
-                        Text(entry.localizedName).tag(entry.url)
+                        Text(entry.localizedName)
+                        
+                        if browserDetector.isDefaultBrowser(entry: entry) {
+                            Divider()
+                        }
                     }
                 }
                 .labelsHidden()
@@ -24,7 +28,6 @@ struct ContentView: View {
                 }
                 .keyboardShortcut(.defaultAction)
                 .disabled(isInvalidURL(string: browserDestination))
-                
             }
         }
         .onAppear {
