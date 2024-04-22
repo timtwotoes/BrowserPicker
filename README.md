@@ -2,7 +2,7 @@
 
 Sample application that lists available browser that is registered on the system. Given an URL it can open the specified browser with the URL.
 
-[Screenshot](BrowserPicker.png)
+![Screenshot](BrowserPicker.png)
 
 ## Resources
 
