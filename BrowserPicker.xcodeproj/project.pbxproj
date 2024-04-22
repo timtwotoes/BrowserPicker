@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E98326572BD6DBCB005C9216 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98326562BD6DBCB005C9216 /* BundleExtensions.swift */; };
+		E98326592BD7023B005C9216 /* BrowserEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98326582BD7023B005C9216 /* BrowserEntryView.swift */; };
 		E99C10FB2BC7066600EC3BFA /* BrowserEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C10FA2BC7066600EC3BFA /* BrowserEntry.swift */; };
 		E99C10FD2BC70CCE00EC3BFA /* BrowserDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C10FC2BC70CCE00EC3BFA /* BrowserDetector.swift */; };
 		E9AD66B82BC45EE2004C6B4C /* BrowserPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AD66B72BC45EE2004C6B4C /* BrowserPickerApp.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E98326562BD6DBCB005C9216 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		E98326582BD7023B005C9216 /* BrowserEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserEntryView.swift; sourceTree = "<group>"; };
 		E99C10FA2BC7066600EC3BFA /* BrowserEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserEntry.swift; sourceTree = "<group>"; };
 		E99C10FC2BC70CCE00EC3BFA /* BrowserDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserDetector.swift; sourceTree = "<group>"; };
 		E99C11022BC743CC00EC3BFA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				E9AD66BD2BC45EE3004C6B4C /* Preview Content */,
 				E99C10FA2BC7066600EC3BFA /* BrowserEntry.swift */,
 				E99C10FC2BC70CCE00EC3BFA /* BrowserDetector.swift */,
+				E98326562BD6DBCB005C9216 /* BundleExtensions.swift */,
+				E98326582BD7023B005C9216 /* BrowserEntryView.swift */,
 			);
 			path = BrowserPicker;
 			sourceTree = "<group>";
@@ -155,10 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98326592BD7023B005C9216 /* BrowserEntryView.swift in Sources */,
 				E99C10FB2BC7066600EC3BFA /* BrowserEntry.swift in Sources */,
 				E9AD66BA2BC45EE2004C6B4C /* ContentView.swift in Sources */,
 				E99C10FD2BC70CCE00EC3BFA /* BrowserDetector.swift in Sources */,
 				E9AD66B82BC45EE2004C6B4C /* BrowserPickerApp.swift in Sources */,
+				E98326572BD6DBCB005C9216 /* BundleExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

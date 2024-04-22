@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/timtwotoes/BrowserAvailability",
       "state" : {
-        "revision" : "c31576dfc29bd2d327df0332e46c22d54499fe3b",
-        "version" : "1.1.0"
+        "revision" : "ce138bde8e65b9adbc20ba3fd65e7fa4a4a343b5",
+        "version" : "1.1.1"
       }
     }
   ],

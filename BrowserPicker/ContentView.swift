@@ -10,7 +10,7 @@ struct ContentView: View {
             HStack {
                 Picker("Browser", selection: $browserDetector.selectedBrowser) {
                     ForEach(browserDetector.availableBrowsers) { entry in
-                        Text(entry.localizedName)
+                        BrowserEntryView(entry: entry)
                         
                         if browserDetector.isDefaultBrowser(entry: entry) {
                             Divider()
@@ -18,6 +18,7 @@ struct ContentView: View {
                     }
                 }
                 .labelsHidden()
+                .labelStyle(.titleAndIcon)
                 .fixedSize()
 
                 TextField("Enter URL", text: $browserDestination)
