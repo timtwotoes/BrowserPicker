@@ -2,6 +2,8 @@
 
 Sample application that lists available browser that is registered on the system. Given an URL it can open the specified browser with the URL.
 
+[Screenshot](BrowserPicker.png)
+
 ## Resources
 
 [Custom AsyncImage View](https://bignerdranch.com/blog/asynchronously-load-images-with-customized-asyncimage-view-in-swiftui/)
