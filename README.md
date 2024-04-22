@@ -1,8 +1,9 @@
 #  BrowserPicker
 
-Sample application that lists available browser that is registered on the system. Given an URL it can open the specified browser with the URL.
+Sample application that lists available browser that is registered on the system. The browser picker mimicks the system default browser selector in the settings panel.
+Select a browser and input a valid URL, and it will open it in the specified browser.
 
-![Screenshot](BrowserPicker.png)
+![Screenshot](BrowserPickerScreenshot.png)
 
 ## Resources
 
