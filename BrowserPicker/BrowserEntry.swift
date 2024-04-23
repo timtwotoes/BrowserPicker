@@ -15,36 +15,34 @@ final class BrowserEntry: Identifiable, Hashable, ObservableObject {
         return url
     }
     
-    private static let resourceKeys = Set([URLResourceKey.localizedNameKey])
-    private static let emptyIcon = NSImage(size: NSSize(width: 16, height: 16))
+    private static let iconSize = CGSize(width: 16, height: 16)
+    private static let emptyIcon = NSImage(size: iconSize)
+    private static let thumbnailGenerator = QLThumbnailGenerator.shared
+    
     @Published var url: URL
     @Published var localizedName: String
     @Published var icon: NSImage
     
     init?(url: URL) {
-        guard let applicationName = try? url.resourceValues(forKeys: BrowserEntry.resourceKeys).localizedName else {
+        guard let applicationName = try? url.resourceValues(forKeys: [URLResourceKey.localizedNameKey]).localizedName else {
+            return nil
+        }
+
+        guard let bundle = Bundle(url: url) else {
             return nil
         }
         
         self.url = url
-        
         self.localizedName = applicationName
-        
         self.icon = BrowserEntry.emptyIcon
         
-        if let bundle = Bundle(url: url) {
-            if let iconURL = bundle.applicationIconURL {
-                let iconSize = CGSize(width: 16, height: 16)
-                let scale = NSScreen.main!.backingScaleFactor
-                let request = QLThumbnailGenerator.Request(fileAt: iconURL, size: iconSize, scale: scale, representationTypes: .thumbnail)
-                    
-                let generator = QLThumbnailGenerator.shared
-                    
-                generator.generateBestRepresentation(for: request) { thumbnail, error in
-                    DispatchQueue.main.async {
-                        if let thumbnail {
-                            self.icon = thumbnail.nsImage
-                        }
+        if let iconURL = bundle.applicationIconURL {
+            let request = QLThumbnailGenerator.Request(fileAt: iconURL, size: BrowserEntry.iconSize, scale: 1, representationTypes: .thumbnail)
+                
+            BrowserEntry.thumbnailGenerator.generateBestRepresentation(for: request) { thumbnail, error in
+                DispatchQueue.main.async {
+                    if let thumbnail {
+                        self.icon = thumbnail.nsImage
                     }
                 }
             }
