@@ -2,19 +2,7 @@ import AppKit
 import QuickLookThumbnailing
 import SwiftUI
 
-final class BrowserEntry: Identifiable, Hashable, ObservableObject {
-    static func == (lhs: BrowserEntry, rhs: BrowserEntry) -> Bool {
-        return lhs.url == rhs.url
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(url)
-    }
-    
-    public var id: URL {
-        return url
-    }
-    
+final class BrowserEntry: ObservableObject {
     private static let iconSize = CGSize(width: 16, height: 16)
     private static let emptyIcon = NSImage(size: iconSize)
     private static let thumbnailGenerator = QLThumbnailGenerator.shared
@@ -47,5 +35,19 @@ final class BrowserEntry: Identifiable, Hashable, ObservableObject {
                 }
             }
         }
+    }
+}
+
+extension BrowserEntry: Identifiable {
+    static func == (lhs: BrowserEntry, rhs: BrowserEntry) -> Bool {
+        return lhs.url == rhs.url
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(url)
+    }
+    
+    public var id: URL {
+        return url
     }
 }
